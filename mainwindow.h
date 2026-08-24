@@ -26,6 +26,16 @@ private slots:
     void on_btnDescendant_clicked();
     void on_btnExporterPDF_clicked();
     void on_btnStatistiques_clicked();
+     void on_btnReclamation_clicked();
+     void on_btnContacterFormateur_clicked();
+     void on_btnFeedback_clicked();
+     void chargerFeedback(int idCours);
+    void on_tableViewCours_clicked(const QModelIndex &index);
+
+
+
+
+
 
     // Cours
     void on_btnAjouterCours_clicked();
@@ -38,6 +48,10 @@ private slots:
     void on_btnDescendantCours_clicked();
     void on_btnCours_3_clicked();
     void on_btnStagiaires_4_clicked();
+    void on_calendarWidget_clicked(const QDate &date);
+    void on_btnModifierCours_clicked();
+    void viderChampsCours();
+
 
 private:
     Ui::MainWindow *ui;
@@ -47,6 +61,10 @@ private:
     void afficherStagiaires();
     void viderChamps();
     void trier(Qt::SortOrder ordre);
-    void trierCours(Qt::SortOrder ordre);    // Déclaration uniquement !
+    void trierCours(Qt::SortOrder ordre);
+    void envoyerEmailBrevo(const QString &destinataire,
+                           const QString &sujet,
+                           const QString &message);
+   // Déclaration uniquement !
 };
 #endif // MAINWINDOW_H

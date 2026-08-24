@@ -1,4 +1,4 @@
-QT += core widgets sql charts printsupport
+QT += core widgets sql charts printsupport network
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 TARGET = rattrapage1
 TEMPLATE = app
@@ -12,3 +12,4 @@ HEADERS += mainwindow.h \
 FORMS += mainwindow.ui
 
 RESOURCES +=
+
